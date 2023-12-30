@@ -1,37 +1,46 @@
-import React from 'react'
-import "./Navbar.css"
+import React from 'react';
+import logoImage from '../images/logo.png'; 
+
 const Navbar = () => {
+  const navbarStyle = {
+    backgroundColor: '#A6B9FA',
+    padding: '20px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  };
 
+  const tabStyle = {
+    textDecoration: 'none',
+    color: 'black',
+    marginLeft: '20px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+  };
 
-
+  const handleTabClick = (tab) => {
+    // Implement tab selection functionality here
+  };
 
   return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#"><b>My News-App</b></a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">News</a>
-        </li>
-   
-      </ul>
-  
+    <div>
+      <div style={navbarStyle}>
+        <img src={logoImage} alt="Your Logo" style={{ width: '100px', height: 'auto' }} />
+        <div>
+          <span style={tabStyle} onClick={() => handleTabClick('lajmet')}>
+            Lajmet e orës
+          </span>
+          <span style={tabStyle} onClick={() => handleTabClick('live')}>
+            Dëgjo live
+          </span>
+          <span style={tabStyle} onClick={() => handleTabClick('lista')}>
+            Lista
+          </span>
+        </div>
+      </div>
+      {/* Content for selected tab goes here */}
     </div>
-  </div>
-</nav>
-    </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

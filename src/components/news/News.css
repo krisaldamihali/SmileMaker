@@ -6,6 +6,19 @@
     margin-left: 7.2rem;
     height: 400px;
     width: 350px;
+    overflow: hidden;
+}
+.card .card-body {
+    height: 100%; /* Ensure the card body takes up the entire height */
+    display: flex;
+    flex-direction: column;
+}
+  
+.card .card-body h5,
+.card .card-body p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 @media screen and (max-width:578px) {
     .card{
