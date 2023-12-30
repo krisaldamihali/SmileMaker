@@ -22,8 +22,10 @@ const News = () => {
 
   return (
     <>
-      <h1 className="text-center my-3">Lajmet e ditës</h1>
-      <div className="mainDiv">
+      <h1 className="text-center my-3" style={{ fontWeight: "bold", color: "black", fontSize:'60px' }}>
+        LAJMET E DITËS
+      </h1>     
+       <div className="mainDiv">
         {mynews.map((ele) => {
           return (
             <div
