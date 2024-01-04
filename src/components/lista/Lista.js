@@ -29,7 +29,7 @@ const Lista = () => {
   };
 
   const openNewsPage = () => {
-    window.open('/News', '_blank');
+    window.open('/', '_blank');
   };
 
   const openSportPage = () => {

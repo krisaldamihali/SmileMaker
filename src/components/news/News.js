@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./News.css";
+import { Button } from "antd";
 
 const News = () => {
   const [mynews, setMyNews] = useState([]);
@@ -49,7 +50,7 @@ const News = () => {
                 </h5>
                 <p className="card-text">{ele.description}</p>
                 <a
-                  href={ele.url}
+                  href={ele.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"
